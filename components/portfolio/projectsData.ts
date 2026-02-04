@@ -59,9 +59,9 @@ L’ensemble du système repose sur une logique de performance mesurable, avec u
     `,
         previewVideo:"/videos/mmi-benchmark_video.mp4",
         gallery: [
-            "/images/portfolio/MMI-Benchmark/MMI-Benchmark_accueil.jpg",
-            "/images/portfolio/MMI-Benchmark/MMI-Benchmark_aimtrainer.jpg",
-            "/images/portfolio/MMI-Benchmark/MMI-Benchmark_profil.jpg"
+            "/images/portfolio/mmi-benchmark/MMI-Benchmark_accueil.jpg",
+            "/images/portfolio/mmi-benchmark/MMI-Benchmark_aimtrainer.jpg",
+            "/images/portfolio/mmi-benchmark/MMI-Benchmark_profil.jpg"
 
 
 
@@ -80,10 +80,10 @@ L’ensemble du système repose sur une logique de performance mesurable, avec u
 
 
         roleImages: [
-            "/images/portfolio/MMI-Benchmark/MMI-Benchmark_leaderboard.jpg",
+            "/images/portfolio/mmi-benchmark/MMI-Benchmark_leaderboard.jpg",
 
-            "/images/portfolio/MMI-Benchmark/MMI-Benchmark_typetest.webp",
-            "/images/portfolio/MMI-Benchmark/MMI-Benchmark_calcul.webp",
+            "/images/portfolio/mmi-benchmark/MMI-Benchmark_typetest.webp",
+            "/images/portfolio/mmi-benchmark/MMI-Benchmark_calcul.webp",
         ],
 
         tech: [
@@ -127,6 +127,8 @@ Dans le cadre d’un projet de groupe, nous avons imaginé l’édition 2026 du 
         gallery: [
             "/images/portfolio/multimedialpes/multimedialpes_affiche.webp",
             "/images/portfolio/multimedialpes/multimedialpes_presentation.webp"
+
+
 
         ],
         cta: {
