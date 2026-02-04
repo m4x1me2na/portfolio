@@ -11,23 +11,26 @@ import ProjectChanger from "@/components/portfolio/ProjectPage/ProjectChanger";
 import EvolvShowcase from "@/components/portfolio/EvolvShowcase";
 import CTASlug from "@/components/Scrumble/ScrumbleTestSlug";
 
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
-import type {Metadata} from "next";
+type PageProps = {
+    params: Promise<{ slug: string }>;
+};
 
-
-type Props = { params: { slug: string } };
-
-export function generateMetadata({params}: Props): Metadata {
-    const p = projects.find((x) => x.slug === params.slug);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const p = projects.find((x) => x.slug === slug);
 
     if (!p) {
-        return {title: "Projet introuvable ● Maxime Znamiec"};
+        return { title: "Projet introuvable ● Maxime Znamiec" };
     }
 
     return {
         title: `${p.title} ● Maxime Znamiec`,
     };
 }
+
 
 
 function SectionRow({
@@ -39,8 +42,9 @@ function SectionRow({
     title: string;
     subtitle: string;
     images?: string[];
-    children: React.ReactNode;
+    children: ReactNode;
 }) {
+
     return (
         <section className="mt-28">
             <div className="grid grid-cols-1 2xl:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-10 2xl:gap-16 items-start">
@@ -84,15 +88,10 @@ function SectionRow({
 }
 
 
-export default function ProjectPage({
-                                        params,
-                                    }: {
-    params: { slug: string };
-}) {
-    const { slug } = params;
+export default async function ProjectPage({ params }: PageProps) {
+    const { slug } = await params;
 
     const project = projects.find((p) => p.slug === slug);
-
     if (!project) return <div className="px-8 py-20">Projet introuvable.</div>;
 
     return (
