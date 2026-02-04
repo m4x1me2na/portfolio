@@ -29,7 +29,11 @@ export default function DecouvrirButtonResponsive({
             <Link
                 href={href}
                 aria-label={label}
-                onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "auto" })}
+                onClick={() => {
+                  setTimeout(() => {
+                        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+                      }, 500);
+                }}
                 className="
           xl:hidden
           w-[50vw]
