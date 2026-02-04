@@ -45,7 +45,7 @@ export const projects: Project[] = [
         subtitle: "Plateforme de mini-jeux compétitifs orientée performance et progression",
 
         category: "web",
-        image: "/images/portfolio/MMI-Benchmark/MMI-Benchmark_mockup.webp",
+        image: "/images/portfolio/mmi-benchmark/MMI-Benchmark_mockup.webp",
 
         year: 2024,
         services: ["DESIGN", "DEVELOPMENT"],
