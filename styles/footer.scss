@@ -1,0 +1,45 @@
+
+
+.line{
+  background-size: 400%;
+  background-position: 20%;
+  transition: scale 0.5s cubic-bezier(0.22, 1.61, 0.36, 1.00), background-position ease-in-out 1s;
+}
+
+
+.line:hover {
+
+  background-position: right;
+  scale: 1.04;
+}
+
+
+
+
+
+
+@media (pointer: coarse) {
+  .line{
+    background-position: left;
+    background-size: 400%;
+    animation: line-animation 14s infinite alternate;
+  }
+  .line:hover {
+    background-position: left !important;
+    scale: 1 !important;
+    transition: none !important;
+  }
+
+}
+
+
+@keyframes line-animation {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+
+

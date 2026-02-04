@@ -1,0 +1,51 @@
+
+.scrumblenormal-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+}
+
+.scrumblenormal-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+
+.scrumblenormal-arrow {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+
+.scrumblenormal-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.5em;
+  height: 1px;
+  background-color: #525252;
+  --lineActive: #fff;
+  background-image: linear-gradient(to right, var(--lineActive) 0%, var(--lineActive) 100%);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0 100%; /* start vide */
+  transition: none;
+}
+
+
+
+.scrumblenormal-mask-clip {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  line-height: 1;
+}
+
+
+

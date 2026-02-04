@@ -1,0 +1,178 @@
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+:root {
+
+  --gradientlight: linear-gradient(in oklch 60deg, #fd1f00 0.0%, #fe682b 32.0%, #ffbb81 60.0%, #1e7a64 100.0%);
+
+  --foreground: #ffecec;
+  --background: #0e100f;
+  --selected: #fe682b;
+}
+
+::selection {
+  background: var(--selected);
+  color: var(--foreground);
+}
+
+@keyframes btnClick {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-raleway), sans-serif;
+}
+
+
+html, body {
+  height: auto;
+  scroll-behavior: auto;
+  overflow-x: clip;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+a:hover {
+  text-decoration: none; /* ou laisse vide si tu veux rien */
+}
+
+
+::view-transition-group(root) {
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+  will-change: transform, opacity, scale;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+  animation: none !important;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none !important;
+}
+
+
+.curve {
+  position: fixed; /* sort du flux */
+  inset: 0; /* couvre tout l’écran */
+  pointer-events: none;
+  z-index: 9999; /* ajuste selon ton header */
+
+  /* on garde tes règles existantes pour svg/background/route */
+  svg,
+  .background {
+    position: fixed;
+    height: calc(100vh + 600px);
+    width: 100vw;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    /* NE PAS mettre de background ici, seulement sur .background si besoin */
+  }
+
+  .background {
+    /* si tu veux un rideau de secours au mount, choisis sa couleur ici */
+    background-color: transparent; /* <- était noir, mets transparent */
+    transition: opacity 0s linear 0.1s;
+  }
+
+  .route {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    background: var(--gradientlight);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 46px;
+    z-index: 3;
+    transform: translateX(-50%);
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+h4 {
+  font-size: clamp(2.68rem, 3vw, 10rem);
+}
+
+
+.gradient-highlight {
+  /* le dégradé est un BACKGROUND */
+  background-image: var(--gradientlight);
+
+  /* clip le background à la forme des glyphes */
+  background-clip: text;
+  -webkit-background-clip: text; /* Safari/Chrome */
+
+  /* rend le texte transparent pour voir le bg à travers */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Safari */
+
+  /* (optionnel mais utile) */
+  display: inline-block; /* évite des artefacts d’overflow */
+
+
+
+}
+
+
+
+
+
+.text-highlight {
+  /* le dégradé est un BACKGROUND */
+  background-image: var(--gradientlight);
+
+  /* clip le background à la forme des glyphes */
+  background-clip: text;
+  -webkit-background-clip: text; /* Safari/Chrome */
+
+  /* rend le texte transparent pour voir le bg à travers */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Safari */
+
+  /* (optionnel mais utile) */
+  display: inline-block; /* évite des artefacts d’overflow */
+
+  font-weight: bold;
+}
+
+
+
+
+.no-drag {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+
+

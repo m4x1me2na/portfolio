@@ -1,0 +1,142 @@
+.header {
+  position: relative;
+  color: var(--foreground-color);
+  font-size: 2.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vh 1vw 1vh 1vw;
+  flex-wrap: wrap;
+
+}
+
+
+.headerLogo {
+  /* le dégradé est un BACKGROUND */
+  background-image: var(--gradientlight);
+
+  /* clip le background à la forme des glyphes */
+  background-clip: text;
+  -webkit-background-clip: text; /* Safari/Chrome */
+
+  /* rend le texte transparent pour voir le bg à travers */
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Safari */
+
+  /* (optionnel mais utile) */
+  display: inline-block; /* évite des artefacts d’overflow */
+}
+
+.header nav {
+  gap: 1.5em;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+.header.header--project {
+  background-color: var(--foreground);
+  color: var(--background);
+
+}
+
+.header .scrumblenormal-line--project{
+  background-color: #a3a3a3;
+  background-image: linear-gradient(to right, var(--background) 0%, var(--background) 100%);
+}
+
+
+.header .scrumblebutton-container--project{
+  border-color: #a3a3a3;
+}
+
+.header .scrumblebutton-container--project:hover{
+  border-color: var(--background);
+}
+
+.logoMobile.header--project {
+  background-color: var(--foreground);
+  color: var(--background);
+
+}
+
+.logoMobile .scrumblenormal-line--project{
+  background-color: #a3a3a3;
+  background-image: linear-gradient(to right, var(--background) 0%, var(--background) 100%);
+}
+
+
+.logoMobile .scrumblebutton-container--project{
+  border-color: #a3a3a3;
+}
+
+.logoMobile .scrumblebutton-container--project:hover{
+  border-color: var(--background);
+}
+
+
+@media (max-width: 1024px) {
+  .header {
+    display: none;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .logoMobile {
+    display: none;
+  }
+
+}
+
+
+
+/* Desktop header project */
+.header.header--project .scrumbletest-container--project [style],
+.header.header--project .scrumbletest-container--project span,
+.header.header--project .scrumbletest-container--project svg {
+  color: var(--background) ;
+
+}
+
+/* Ligne de base grise */
+.header.header--project .scrumbletest-container--project .bg-white\/30 {
+  background-color: #a3a3a3 ;
+}
+
+.header.header--project .scrumbletest-container--project button {
+  border-color: #a3a3a3 ;
+}
+
+.header.header--project .scrumbletest-container--project button:hover {
+  border-color: var(--background) ;
+}
+
+
+
+/* Fill blanc (anim) -> suit la couleur du texte du header */
+.header.header--project .scrumbletest-container--project .js-underline-fill {
+  background-color: var(--background) ;
+}
+
+/* Mobile */
+.logoMobile.header--project .scrumbletest-container--project span,
+.logoMobile.header--project .scrumbletest-container--project svg {
+  color: var(--background) ;
+}
+
+.logoMobile.header--project .scrumbletest-container--project .bg-white\/30 {
+  background-color: #a3a3a3 ;
+}
+
+.logoMobile.header--project .scrumbletest-container--project .js-underline-fill {
+  background-color: var(--background) ;
+}

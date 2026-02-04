@@ -1,0 +1,18 @@
+
+/* LA LIGNE */
+.scrumbleslug-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10%;       // sous le texte (ajuste 0.00em -> 0.12em)
+  height: 1px;
+  display: block;
+  pointer-events: none;
+  background-color: #525252;
+  --lineActive: #fff;
+
+  /* ton anim GSAP sur background-size fonctionne bien avec ça */
+  background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+}

@@ -1,0 +1,63 @@
+.button{
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 20px;
+  z-index: 9999;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--foreground);
+  border: 1px solid rgba(14,16,15,0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger {
+  width: 100%;
+  &::after, &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 40%;
+    margin: auto;
+    background: var(--gradientlight);
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  &::after {
+    top: -5px;
+  }
+
+  &::before {
+    top: 5px;
+  }
+}
+
+.burgerActive{
+
+  &::after{
+    transform: rotate(45deg);
+    top: -1px;
+  }
+
+  &::before{
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .button{
+
+    width: 60px;
+    height: 60px;
+
+
+  }
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="062fe0a5-7340-44d8-b160-8212932074ee" name="Infomaniak">
+        <fileTransfer rootFolder="/srv/customer/sites/wip.maxime-znamiec.fr/styles" accessType="SFTP" host="57-106281.ssh.hosting-ik.com" port="22" sshConfigId="5cf95a0d-4a9d-4083-b97e-8638cafe3143" sshConfig="cu2r6MjikDi_tmp_1767644581@57-106281.ssh.hosting-ik.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

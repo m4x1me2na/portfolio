@@ -1,0 +1,45 @@
+
+.scrumblebutton-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  padding: 1em 2em 1em 2em;
+  border-color: #616161;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2em;
+  transition: border-color ease-in-out .30s;
+}
+
+.scrumblebutton-container:hover {
+  border-color: #ffffff;
+}
+
+.scrumblebutton-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+
+.scrumblebutton-arrow {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+
+
+.scrumblebutton-mask-clip {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  line-height: 1;
+}
+
+
+

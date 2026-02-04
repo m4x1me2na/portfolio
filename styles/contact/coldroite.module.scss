@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.text {
+  font-size: clamp(1rem, 1.1vw, 1.3rem);
+  line-height: 1.6;
+  max-width: 22rem;
+
+}
+
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.letter {
+  display: inline-block;
+  color: transparent; /* on ne voit que le stroke au début */
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.45);
+  opacity: 0.25;
+}

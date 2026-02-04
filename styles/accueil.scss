@@ -1,0 +1,77 @@
+:root {
+  --cercle-size: clamp(220px, 48vmin, 560px);
+  --cercle-inner-scale: 0.62;
+
+  --cercle-text-size: clamp(16px, 3.2vmin, 28px);
+
+}
+
+.cercle-section {
+  position: absolute;
+  width: 100%;
+
+}
+
+
+/* Bloc centré dans le viewport */
+.cercle-accueil {
+  position: absolute;
+  right: 5%;
+  top: 9%;
+
+
+  width: var(--cercle-size);
+  height: var(--cercle-size);
+
+  pointer-events: none;
+}
+/* Groupe des cercles (ensemble des anneaux) */
+.cercle-accueil__cercles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.arrow-mask {
+  display: inline-block;
+  overflow: hidden;
+  height: 1em;
+  line-height: 1;
+}
+
+/* Texte au centre */
+.cercle-accueil__texte {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: var(--cercle-text-size);
+  text-align: center;
+  pointer-events: auto;
+  z-index: 25;
+}
+
+/* Cible l’enveloppe interne du CerclePointille */
+.wrap-ring.cercle-accueil__svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+/* Option mobile */
+@media (max-width: 480px) {
+  :root { --cercle-inner-scale: 0.66; }
+}
+
+
+
+
+@media (max-width: 1536px) {
+  .cercle-accueil{
+    display: none;
+  }
+}
+
+
+
+

@@ -1,0 +1,48 @@
+.page {
+  --p: 0;
+  --gradientlight: linear-gradient(
+                  86deg,
+                  rgba(253, 31, 0, 1) 0%,
+                  rgba(254, 104, 43, 1) 32%,
+                  rgba(255, 187, 129, 1) 60%,
+                  rgba(30, 122, 100, 1) 100%
+  );
+}
+
+
+
+
+.title {
+  font-size: clamp(3.3rem, 10vw, 15rem);
+  margin: 0;
+  font-weight: 700;
+
+}
+
+
+/* Effet skew (déjà présent) + wipe vertical dans le texte */
+.skewElem {
+  transform-origin: center center;
+  will-change: transform;
+  color: transparent;
+
+  /* couche 1 = gradient final, couche 2 = blanc */
+  background-image: var(--gradientlight),
+  linear-gradient(#ffffff, #ffffff);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top left;
+
+  /* --p = 0..100, anime la hauteur du gradient */
+  background-size: 100% calc(var(--p, 0) * 1%),
+  100% 100%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media(max-width: 800px) {
+  .skewImg{
+    display: none;
+  }
+}

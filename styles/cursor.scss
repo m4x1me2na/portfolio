@@ -1,0 +1,113 @@
+#text {
+  text-align: center;
+  font-size: 4rem;
+  height: 800px;
+  align-items: center;
+  display: flex;
+}
+
+
+body {
+  cursor: default;
+}
+
+#cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 10;
+  opacity: 0;
+}
+
+/* BOULE DE BASE */
+#cursor-core {
+  height: 40px;
+  width: 40px;
+  background-color: var(--foreground);
+  border-radius: 20px;
+}
+
+/* PREVIEW IMAGE PROJET */
+#cursor-preview {
+  position: absolute;
+  top: -70px;   /* décalage au-dessus du curseur */
+  left: -110px;    /* décalage sur le côté */
+  width: 260px;
+  height: 160px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0; /* au cas où */
+
+
+}
+
+
+#cursor-label {
+  position: absolute;
+  top: 0;
+  left: -52px;
+
+  height: 30px;
+  width: 160px; /* IMPORTANT ! largeur fixe = fluidité */
+  overflow: hidden;
+  border-radius: 999px;
+
+  background: var(--foreground);
+  color: var(--background);
+
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+
+/* wrapper interne -->
+   il glisse comme ton <div> dans .marquee */
+#cursor-label-text {
+  position: absolute;
+  width: 200%;  /* super important */
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  animation: cursor-marquee 4s linear infinite reverse;
+}
+
+#cursor-label-text span {
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+@keyframes cursor-marquee {
+  0%   { left: 0; }
+  100% { left: -100%; }
+}
+
+
+@media (pointer: coarse) {
+  #cursor {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  #cursor {
+    display: none !important;
+  }
+}
+
