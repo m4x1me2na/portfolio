@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 
+
+@layer base {
+  *, ::before, ::after {
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
