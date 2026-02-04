@@ -1,5 +1,6 @@
 import {projects} from "@/components/portfolio/projectsData";
 import Image from "next/image";
+import React from "react";
 import ProjectsList from "@/components/portfolio/ProjectPage/ProjectsList";
 import ProjectImageParallax from "@/components/portfolio/ProjectPage/ProjectImageParallax";
 import Magnetic from "@/components/magnetic";
@@ -83,12 +84,12 @@ function SectionRow({
 }
 
 
-export default async function ProjectPage({
-                                              params,
-                                          }: {
-    params: Promise<{ slug: string }>;
+export default function ProjectPage({
+                                        params,
+                                    }: {
+    params: { slug: string };
 }) {
-    const {slug} = await params;
+    const { slug } = params;
 
     const project = projects.find((p) => p.slug === slug);
 
