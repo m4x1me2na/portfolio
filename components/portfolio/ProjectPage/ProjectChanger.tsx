@@ -126,7 +126,8 @@ export default function ProjectChanger({
                 className="
           pointer-events-auto
           w-[fit-content]
-          bg-[var(--foreground)]/70
+          bg-[var(--foreground)]
+          opacity-70
           border border-black/10
           shadow-md
 
