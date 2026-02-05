@@ -84,9 +84,9 @@ export default function PagePortfolio() {
                     </div>
 
                     <div className="order-1 xl:order-2 text-center xl:text-left space-y-6">
-                        <h1 className="gradient-highlight font-bold leading-tight text-4xl sm:text-5xl lg:text-7xl xl:text-8xl">
+                        <h2 className="gradient-highlight font-bold leading-tight text-4xl sm:text-5xl lg:text-7xl xl:text-8xl">
                             Mon portfolio
-                        </h1>
+                        </h2>
 
                         <p className="text-base sm:text-lg lg:text-1xl xl:text-2xl 2xl:text-3xl font-normal leading-relaxed">
                             Découvrez mon portfolio : un ensemble de mes projets mêlant design, graphisme, audiovisuel et développement web.
