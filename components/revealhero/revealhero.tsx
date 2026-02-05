@@ -124,7 +124,7 @@ export default function RevealHero({
 
 
 
-            <h2 className="ah-title"><span ref={dotRef}  id="dot">.</span><span ref={bigRef}>{big}</span></h1>
+            <h2 className="ah-title"><span ref={dotRef}  id="dot">.</span><span ref={bigRef}>{big}</span></h2>
             <h4 ref={midRef} className="ah-mid">{mid}</h4>
             <p ref={smallRef} className="ah-subtitle">{small}</p>
         </section>
