@@ -127,12 +127,12 @@ export default function ProjectChanger({
           pointer-events-auto
           w-[fit-content]
           bg-[var(--foreground)]
-          opacity-70
+          opacity-60
           border border-black/10
           shadow-md
 
-          hover:bg-[var(--foreground)]
-          transition-colors duration-200
+          hover:opacity-100
+          transition-opacity duration-200
 
           px-2.5 py-2
           sm:px-4 sm:py-2.5
