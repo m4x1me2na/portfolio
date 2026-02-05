@@ -18,12 +18,34 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
 
-    description: "Site perso WIP",
+   
 
     icons: {
         icon: "/favicon.ico"
-
     },
+    description:
+    "Maxime Znamiec. Portfolio de développement web et UX/UI. Projets front-end, interfaces web et design d’expérience utilisateur.",
+    authors: [{ name: "Maxime Znamiec" }],
+  creator: "Maxime Znamiec",
+  keywords: [
+    "Maxime Znamiec",
+    "Znamiec",
+    "portfolio Maxime Znamiec",
+    "développement web",
+    "UX UI",
+    "front-end",
+    "portfolio web",
+  ],
+  metadataBase: new URL("https://maxime-znamiec.fr"), 
+  openGraph: {
+    title: "Maxime Znamiec — Développement web & UX/UI",
+    description:
+      "Portfolio de Maxime Znamiec. Projets en développement web et UX/UI.",
+    url: "https://maxime-znamiec.fr",
+    siteName: "Portfolio Maxime Znamiec",
+    locale: "fr_FR",
+    type: "website",
+  },
 
 };
 
