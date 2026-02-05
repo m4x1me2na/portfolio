@@ -23,7 +23,7 @@ export default function PagePortfolio() {
 
             <div>
                
-
+                <h1 className="sr-only">Maxime Znamiec</h1>
 
                 <RevealHero big={"Designer & développeur"}
                             small={<>Je conçois des <span className="text-highlight">expériences </span> numériques, alliant <span
