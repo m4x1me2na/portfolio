@@ -243,7 +243,7 @@ export default function Footer() {
 
                 <div>
                     <div className="uppercase text-[12px] opacity-60">
-                        Status
+                        Statut
                     </div>
 
                     <div className="text-[14px]">Recherche de stage</div>
